@@ -10,9 +10,9 @@ This repository contains a submission of an assignment on django signals.
 
 ## Setup
 
-pip install -r requirements requirements.txt
-python manage.py migrate
-python manage.py runserver
+- pip install -r requirements requirements.txt
+- python manage.py migrate
+- python manage.py runserver
 
 ## Note for assignment solutions
 
