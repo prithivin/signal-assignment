@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <h2>Note: Assignment was completed using ChatGPT</h2>
+    <h2>Topic: Django Signals</h2>
+    <h3>Solution to question 1</h3>
+    <p>By default, Django signals are synchronous. This means:</p>
+    <ul>
+        <li>The caller waits until the signal handler finishes execution.</li>
+        <li>Execution is blocking.</li>
+        <li>The next line executes only after the signal handler completes.</li>
+        <li>The demonstration is done when the following link is accessed: <a href="{% url 'test_signal' %}">Demo1.</a></li>
+        <li>When the above link is opened the a new object is added in the database and a signal is triggered</li>
+        <li>Adding a delay of 5 seconds in the signal handler forces the sigal to pause for 5 seconds.</li>
+        <li>The response is displayed in the link only after 5 seconds.</li>
+    </ul>
+    <h3>Solution to question 2</h3>
+    <p>By default, Django signals run in the same thread as the caller.</p>
+    <ul>
+        <li>The Caller thread and Signal thread are printed in the terminal.</li>
+        <li>Both thread Ids match showing that both are running in the same thread.</li>
+    </ul>
+    <h3>Solution to question 3</h3>
+    <p>By default, Django signals run in the same database transaction as the caller.</p>
+    <ul>
+        <li>The demonstration is done when the following link is accessed: <a href="{% url 'test_transaction' %}">Demo2.</a></li>
+        <li>On clicking this link a database transaction is triggered.</li>
+        <li>Signal executes during the transaction.</li>
+        <li>But the transaction is intentionally rolled back.</li>
+        <li>Since the transaction is rolled back the object is not created in the database.</li>
+        <li>After roll back the database is queried for the object and it returns 0.</li>
+        <li>This shows that the signal paticipated in the same transaction.</li>
+        <li>When the transaction rolled back, the database change also was rolled back.</li>
+    </ul>
+    <h2>Topic: Custom Classes in Python</h2>
+    <h3>Solution to question on custom classes</h3>
+    <ul>
+        <li>The demonstration is done when the following link is accessed: <a href="{% url 'test_rectangle' %}">Demo3.</a></li>
+        <li>The output on iterating an instance of the Rectangle class is shown in the above link and also printed in the terminal.</li>
+    </ul>
+</body>
+</html>
